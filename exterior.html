@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta http-equiv="ScreenOrientation" content="autoRotate:enabled">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,900&display=swap"
+    rel="stylesheet">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/exterior.css" />
+    <link rel="stylesheet" href="./css/viewbox.css" />
+   
+  </head>
+  <body>
+    <div class="exterior_gallery_container">
+      <a class="fixed_back_button_exterior" href="#page3"
+        ><i class="fas fa-angle-double-left"></i
+      ></a>
+
+      <div class="heading_exterior">
+        <h1>Gallery</h1>
+        <h4>Exterior</h4>
+      </div>
+
+      <div class="exterior_gallery">
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/1.jpg"><img class="thumbnail_img" src="images/exterior/1.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/2.jpg"><img class="thumbnail_img" src="images/exterior/2.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/3.jpg"><img class="thumbnail_img" src="images/exterior/3.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/4.jpg"><img class="thumbnail_img" src="images/exterior/4.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/5.jpg"><img class="thumbnail_img" src="images/exterior/5.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/6.jpg"><img class="thumbnail_img" src="images/exterior/6.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/7.jpg"><img class="thumbnail_img" src="images/exterior/7.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/8.jpg"><img class="thumbnail_img" src="images/exterior/8.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/9.jpg"><img class="thumbnail_img" src="images/exterior/9.jpg" alt=""></a></div> 
+        <div class="thumbnail"> <a class="image-link image-link_exterior" href="./images/exterior/10.jpg"><img class="thumbnail_img" src="images/exterior/10.jpg" alt=""></a></div> 
+      </div>
+    </div>
+
+
+    <script src="./js/jquery.viewbox.min.js"></script>
+    <script>
+        $(".image-link_exterior").viewbox();
+    </script>
+    <script>
+      $(window).on("load", function() {
+        $(".exterior_gallery_container").innerHeight("100%");
+      });
+
+
+      setTimeout(function() {
+        $(".loading_screen").addClass("active");
+      }, 4000);
+      $(".exterior_gallery_container").addClass("active");
+
+      $(".fixed_back_button_exterior").on("click", function() {
+        setTimeout(function() {
+          fullpage_api.setKeyboardScrolling(true);
+          fullpage_api.setAllowScrolling(true);
+          $("#block_move").removeClass("move");
+          $(".gallery_block_containers").removeClass("move");
+          $(".slide_exterior").removeClass("active");
+          $(".fixed_back_button_exterior").toggleClass("active");
+          $(".nav-slider").removeClass("active");
+        }, 500);
+      });
+
+      $(window).on('popstate', function() {
+        fullpage_api.setKeyboardScrolling(true);
+          fullpage_api.setAllowScrolling(true);
+          $("#block_move_interior").removeClass("move");
+          $("#block_move_exterior").removeClass("move");
+          $("#block_move_garden_and_views").removeClass("move");
+          $(".slide_exterior").removeClass("active");
+          $(".fixed_back_button_exterior").toggleClass("active");
+          $(".nav-slider").removeClass("active");
+ 
+});
+    </script>
+  </body>
+</html>

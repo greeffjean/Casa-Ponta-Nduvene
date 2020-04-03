@@ -1,0 +1,260 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+
+.exterior_gallery_container{
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 2000ms;
+    -o-transition: 2000ms;
+    transition: 2000ms;
+   
+}
+
+.fixed_back_button_exterior {
+    position: fixed;
+    right: -500px;
+    padding: 1rem;
+    background: white;
+    z-index: 100;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-right: -1px;
+    color: lightgrey;
+    -webkit-transition: 2000ms;
+    -o-transition: 2000ms;
+    transition: 2000ms;
+}
+
+.fixed_back_button_exterior.active {  
+    right: 0;
+    -webkit-transition: 2000ms;
+    -o-transition: 2000ms;
+    transition: 2000ms;
+}
+.fixed_back_button_exterior i {
+    font-size: 4rem;   
+}
+.fixed_back_button_exterior i:hover {
+    color:#b8c5ce;
+}
+
+
+
+.heading_exterior {
+    width: 100%;
+    min-height: 14%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+            padding-top: 1rem;
+}
+
+.heading_exterior h1 {
+    font-size: 8rem;
+    color:#b8c5ce;
+    padding: 0 1rem 0 3rem;
+    font-family: "Playfair", serif;
+}
+.heading_exterior h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3rem;
+    padding-left: 1rem;
+    color: rgb(255, 255, 255);
+    margin-top: 2.7rem;
+    border-left: 5px solid#ffffff;
+}
+
+.heading_exterior a {
+    text-decoration: none;
+}
+
+.exterior_gallery{
+    min-height: 29%;
+    max-height: 75%;
+width: 100%;
+padding-bottom: 2rem;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    margin: 2rem;
+    border: 5px solid #f4f8fb;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+}
+
+
+.thumbnail_img{
+    width: 300px;
+    height: 300px;
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+}
+.thumbnail_img:hover{
+    -webkit-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+}
+
+@media screen and (max-width: 1400px) {
+    .thumbnail {
+        width: 200px;
+        height: 200px;
+    }
+    .thumbnail_img{
+        width:200px;
+        height: 200px;
+    } 
+    .heading_exterior h1 {
+        font-size: 7rem;
+    }
+    .heading_exterior h4 {
+        margin-top: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+.heading_exterior h1 {
+    font-size: 6rem;
+}
+}
+
+@media screen and (max-width: 1100px) {
+.heading_exterior h1 {
+    font-size: 5rem;
+}
+.heading_exterior h4 {
+    margin-top: 0.9rem;
+}
+.thumbnail {
+    margin: 1rem;
+}
+.thumbnail {
+    width: 150px;
+    height: 150px;
+}
+.thumbnail_img{
+    width:150px;
+    height: 150px;
+} 
+}
+@media screen and (max-width: 950px) {
+.heading_exterior h1 {
+    font-size: 4rem;
+}
+.heading_exterior h4 {
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+}
+.heading_exterior h1 {
+    padding: 0 1rem 2rem 1rem;
+}
+.heading_exterior {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+}
+
+@media screen and (max-width: 850px) {
+    .fixed_back_button_exterior {
+        padding: .5rem;
+    }
+}
+@media screen and (max-width: 800px) {
+.heading_exterior {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+.heading_exterior h1 {
+    padding: 0 0 0 1rem;
+}
+.heading_exterior h4 {
+     padding-left: 1rem; 
+     border-left: none; 
+     margin-bottom: 0rem;
+}
+}
+
+@media screen and (max-width: 750px){
+    .heading_exterior h1 {
+        color: #eaeaea;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fixed_back_button_exterior i {
+        font-size: 3rem;
+    }
+    .heading_exterior h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading_exterior h1 {
+        font-size: 2.5rem;
+    }
+    .heading_exterior h4 {
+        font-size: 2.5rem;
+    }
+    .thumbnail {
+        width: 100px;
+        height: 100px;
+    }
+    .thumbnail_img{
+        width:100px;
+        height: 100px;
+    } 
+
+}
+@media screen and (max-height: 500px) {
+    .heading_exterior h1 {
+        font-size: 2.5rem;
+    }
+    .heading_exterior h4 {
+        font-size: 2.5rem;
+    }
+    .thumbnail {
+        width: 100px;
+        height: 100px;
+    }
+    .thumbnail_img{
+        width:100px;
+        height: 100px;
+    } 
+
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta http-equiv="ScreenOrientation" content="autoRotate:enabled">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,900&display=swap"
+    rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/interior.css">
+    <link rel="stylesheet" href="./css/viewbox.css">
+</head>
+<body>
+
+   
+
+    <div class="interior_gallery_container">
+
+            <a class="fixed_back_button_interior" href="#page3"><i class="fas fa-angle-double-left"></i></a>
+
+    <div class="heading_interior"> 
+         <h1>Gallery</h1>
+        <h4>Interior</h4>
+     </div>
+
+    <div class="interior_gallery">
+
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/1.jpg"><img class="thumbnail_img" src="images/interior/1.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/2.jpg"><img class="thumbnail_img" src="images/interior/2.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/3.jpg"><img class="thumbnail_img" src="images/interior/3.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/4.jpg"><img class="thumbnail_img" src="images/interior/4.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/5.jpg"><img class="thumbnail_img" src="images/interior/5.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/6.jpg"><img class="thumbnail_img" src="images/interior/6.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/7.jpg"><img class="thumbnail_img" src="images/interior/7.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/8.jpg"><img class="thumbnail_img" src="images/interior/8.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/9.jpg"><img class="thumbnail_img" src="images/interior/9.jpg" alt=""></a></div> 
+<div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/10.jpg"><img class="thumbnail_img" src="images/interior/10.jpg" alt=""></a></div> 
+    </div>
+
+
+</div>
+    
+<script src="./js/jquery.viewbox.min.js"></script>
+<script>
+    $('.image-link_interior').viewbox();
+  </script>
+<script>
+
+    $(window).on("load", function() {
+        console.log("loaded")
+    })
+
+ $(".fixed_back_button_interior").on("click", function() {
+    setTimeout(function() {
+        fullpage_api.setKeyboardScrolling(true);
+          fullpage_api.setAllowScrolling(true);
+        $("#block_move_interior").removeClass("move");
+        $(".gallery_block_containers").removeClass("move");
+        $(".slide_interior").removeClass("active");
+    $(".fixed_back_button_interior").removeClass("active");
+    $(".nav-slider").removeClass("active");
+    }, 500)
+    });
+
+    $(window).on('popstate', function() {
+        fullpage_api.setKeyboardScrolling(true);
+          fullpage_api.setAllowScrolling(true);
+          $("#block_move_interior").removeClass("move");
+          $("#block_move_boat_and_bay").removeClass("move");
+          $("#block_move_garden_and_views").removeClass("move");
+          $(".slide_interior").removeClass("active");
+          $(".fixed_back_button_interior").toggleClass("active");
+          $(".nav-slider").removeClass("active");
+ 
+});
+
+</script>
+</body>
+</html>
