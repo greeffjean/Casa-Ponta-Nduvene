@@ -1,7 +1,5 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
-
-/* Scroll Bugs */
+/* Scroll Bugs + Uni Styling */
 
 html {
     overflow: scroll;
@@ -11,9 +9,18 @@ html {
 
 html, body {
     overflow: hidden;
+    background: hsl(0, 0%, 99%);
 }
 
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+    h1 {
+padding: 0;
+margin: 0;
+    }
+
+    div {
+        padding: 0;
+        margin: 0;
+            }
 
 
 /* Pre_loader */
@@ -414,25 +421,9 @@ font-size: 1rem;
         z-index: 20000;
     }
 
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-html, body  {
-    background: hsl(0, 0%, 99%);
-    }
 
-    h1 {
-padding: 0;
-margin: 0;
-    }
-
-    div {
-        padding: 0;
-        margin: 0;
-            }
-    
-    
     /* Navbar */ 
-    
     .nav-button {
         position: fixed;
         z-index: 11000;
@@ -811,8 +802,6 @@ transition: 2000ms;
              }
 
     /* Gallery */ 
-    
-    
     .page3_container {
         width: 100%;
         height: 100%;
