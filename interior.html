@@ -3,26 +3,26 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,900&display=swap"
     rel="stylesheet">
 <html lang="en">
+        <meta charset="UTF-8">
 <head>
-    <meta charset="UTF-8">
+      <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/interior.css">
     <link rel="stylesheet" href="./css/viewbox.css">
 </head>
+
 <body>
-
-   
-
+  <!-- Interior Gallery Portal -->
     <div class="interior_gallery_container">
-
+        <!-- fixed back button - navigate to page3 home gallery portal -->
             <a class="fixed_back_button_interior" href="#page3"><i class="fas fa-angle-double-left"></i></a>
-
+            <!-- heading -->
     <div class="heading_interior"> 
          <h1>Gallery</h1>
         <h4>Interior</h4>
      </div>
-
+ <!-- gallery -->
     <div class="interior_gallery">
-
+  <!-- thumbnails -->
 <div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/1.jpg"><img class="thumbnail_img" src="images/interior/1.jpg" alt=""></a></div> 
 <div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/2.jpg"><img class="thumbnail_img" src="images/interior/2.jpg" alt=""></a></div> 
 <div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/3.jpg"><img class="thumbnail_img" src="images/interior/3.jpg" alt=""></a></div> 
@@ -35,19 +35,20 @@
 <div class="thumbnail"> <a class="image-link image-link_interior" href="./images/interior/10.jpg"><img class="thumbnail_img" src="images/interior/10.jpg" alt=""></a></div> 
     </div>
 
-
 </div>
-    
+
+     <!-- Script -->
 <script src="./js/jquery.viewbox.min.js"></script>
+  <!-- Javascript Code -->
 <script>
-    $('.image-link_interior').viewbox();
-  </script>
-<script>
+       /* initiate viewbox.js */
+       $('.image-link_interior').viewbox();
+          /* screen compatability compliace */
+    $(window).on("load", function () {
+      $(".interior_gallery_container").innerHeight("100%");
+    });
 
-    $(window).on("load", function() {
-        console.log("loaded")
-    })
-
+ /* fixed back button doc animation function */
  $(".fixed_back_button_interior").on("click", function() {
     setTimeout(function() {
         fullpage_api.setKeyboardScrolling(true);
@@ -59,7 +60,7 @@
     $(".nav-slider").removeClass("active");
     }, 500)
     });
-
+  /* popstate doc animation function */
     $(window).on('popstate', function() {
         fullpage_api.setKeyboardScrolling(true);
           fullpage_api.setAllowScrolling(true);
